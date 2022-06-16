@@ -1,0 +1,3 @@
+style-loader  less less-loader 用于解析less文件，并通过style-loader将样式文件引入到js文件中
+postcss postcss-loader postcss-preset-env  用于处理css3等css新语法向下兼容原理如同babel，
+因此在webpack配置中需要将postcss-loader写在less-loader之前，在less处理好样式之后，将被css-loader处理之前，给向下兼容处理之后才会生效

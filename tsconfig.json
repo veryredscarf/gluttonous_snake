@@ -1,0 +1,11 @@
+//  TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+// 如果配置信息改为这样，下次还报错，就重新运行下项目，因为get 和set方法只能在es6之后的语法中使用了
+
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "target": "ES2015",
+    "strict": true,
+    "noEmitOnError": true
+  }
+}

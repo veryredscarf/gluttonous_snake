@@ -1,0 +1,107 @@
+*{
+  margin:0;
+  padding:0;
+  // 改变盒模型
+  box-sizing: border-box;
+
+}
+
+// 设置变量
+@bg-color:#b7d4a8;
+body{
+  font-weight:bold;
+  font-size: 20px;
+  font-family:'Courier', 'Courier New', monospace;
+}
+
+// 主窗口的样式
+#main{
+  width:360px;
+  height: 420px;
+  margin: 100px auto;
+  // 设置背景颜色·
+  background-color: @bg-color;
+  border:10px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  // 主轴对齐方式
+  justify-content: space-around;
+  align-items: center;
+
+
+  // 游戏舞台
+  #stage{
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+    position: relative;
+    // background-color: antiquewhite;
+    // 蛇的样式
+    
+    #snake>div{
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      border:1px solid @bg-color;
+      // 开启绝对定位
+      position:absolute;
+    }
+    #snake>div:first-child{
+      width: 10px;
+      height: 10px;
+      background:url("../img/snake.png");
+      background-size: cover;
+      border:1px solid @bg-color;
+      // 开启绝对定位
+      position:absolute;
+    }
+    #snake>div:not(:first-child){
+      width: 10px;
+      height: 10px;
+      background:url("../img/body.png");
+      background-size: contain;
+      border:1px solid @bg-color;
+      // 开启绝对定位
+      position:absolute;
+    }
+
+    #food{
+      width: 10px;
+      height: 10px;
+
+      background-color: red;
+      // 开启绝对定位
+      position:absolute;
+      left: 40px;
+      top: 100px;
+      background: url("../img/food.png") no-repeat;
+      background-size: cover;
+      // display: flex;
+      // 设置主轴为横轴，warp表示自动换行
+      // flex-flow: row wrap;
+      // justify-content: space-between;
+      // align-content: space-between;
+
+      // div{
+      //   width: 4px;
+      //   height: 4px;
+      //   background-color: #000;
+      //   transform: rotate(45deg);
+
+      // }
+    }
+  }
+  // 记分牌
+  #score-panel{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+
+  
+}
+
